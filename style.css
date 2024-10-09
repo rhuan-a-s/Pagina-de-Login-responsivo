@@ -1,0 +1,141 @@
+body {
+    /*configuração padrão para arquivo CSS - Sempre utilizar*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #624386;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#topo {
+    /*Configuração do título principal da página*/
+    text-align: center;
+    font-size: 45px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.card-01 {
+    /*configuração do card principal único da página*/
+    border-radius: 15px;
+    background-color: white;
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-esquerdo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-esquerdo .logo img {
+    width: 60%;
+    margin-left: 15%;
+}
+
+.card-direito {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card-direito .texto h1 {
+    font-size: 32px;
+    color: #000000;
+    text-align: center;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inputs input{
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    color: #624386;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.card-direito .texto button{
+   width: 407px;
+   height: 30px;
+   border-radius: 8px;
+   margin-top: 40px;
+   border: none;
+   background-color: #624386;
+   color: white;
+   }
+
+   .social-login{
+    margin-top: 5%;
+    margin-block-end: 10px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+   .social-icons{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+   }
+
+   #entrar {
+    width: 407px;
+    height: 30px;
+    background-color: #624386;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 300ms ease; /* Propriedade de transição: Cria efeito de animação ao passar o cursor do mouse por cima. */
+}
+
+#entrar:hover {
+    background-color: #3f2857; /* Cor muda ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom: Aplica a transformação (zoom) de forma suave em 0.3 segundos. */
+}
+
+/*Media queries*/
+
+@media (max-width: 480px) {
+    .card-01 {
+        width: 90%;
+        
+        flex-direction: column;
+    }
+
+    .container #topo{
+        display: none;
+    }
+
+    .inputs input, 
+    #entrar {
+        width: 100%;
+    }
+
+}
